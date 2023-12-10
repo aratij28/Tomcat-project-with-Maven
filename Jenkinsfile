@@ -22,7 +22,7 @@ stages{
             parallel{
                 stage ("Deploy to Staging"){
                     steps {
-                        sh "scp -v -o StrictHostKeyChecking=no **/*.war root@${params.staging_server}:/opt/tomcat/webapps/"
+                        sh "scp -v -o StrictHostKeyChecking=no **/*.war root@$172.31.10.147:/opt/tomcat/webapps/"
                     }
                 }
             }
